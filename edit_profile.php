@@ -202,7 +202,7 @@ if(isset($_POST['update'])){
     $dir= htmlentities($_POST['dir']);
     $update = "UPDATE users set f_name='$f_name' ,l_name='$l_name'
      ,user_name='$user_name' , pass= '$u_pass', email='$u_email' ,
-     birthday='$u_birthday',city='$city',dir='$dir'";
+     birthday='$u_birthday',city='$city',dir='$dir' where user_id='$user_id'";
      $run=mysqli_query($conn,$update);
      if($run){
         echo "<script>alert('your profile updated')</script>";
